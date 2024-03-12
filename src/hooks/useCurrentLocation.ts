@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
-
-interface UserLocation {
-  latitude: number;
-  longitude: number;
-}
+import { GeoLocation } from "../types";
 
 export const useCurrentLocation = () => {
-  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  const [userLocation, setUserLocation] = useState<GeoLocation | null>(null);
 
   // define the function that finds the users geolocation
   const getUserLocation = () => {
@@ -23,7 +19,7 @@ export const useCurrentLocation = () => {
         // if there was an error getting the users location
         (error) => {
           console.error("Error getting user location:", error);
-        }
+        },
       );
     }
     // if geolocation is not supported by the users browser
