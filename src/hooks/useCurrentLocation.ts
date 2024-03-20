@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { GeoLocation } from "../types";
 
 export const useCurrentLocation = () => {
-  const [userLocation, setUserLocation] = useState<GeoLocation | null>(null);
+  const [userLocation, setUserLocation] = useState<GeoLocation>();
 
   // define the function that finds the users geolocation
   const getUserLocation = () => {
