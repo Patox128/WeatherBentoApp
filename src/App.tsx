@@ -22,13 +22,15 @@ function App() {
     } else {
       fetchWeather(data!);
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userLocation, data]);
 
   return (
     <main>
-      <MainPanel />
+      <div className="mx-auto max-w-[1280px]">
+        {/* TODO: add header */}
+        <MainPanel />
+      </div>
       {/* <section className="grid h-dvh grid-cols-1 gap-4 p-4 lg:grid-cols-7 lg:grid-rows-7 [&>*]:bg-white/20 [&>*]:shadow-lg [&>*]:backdrop-blur-lg [&>*]:backdrop-saturate-150 [&>*]:backdrop-filter">
         <article className="order-1 rounded-xl border-2 bg-[#111928]/30 p-4 shadow-lg backdrop-blur-lg backdrop-filter lg:order-none lg:col-span-3 lg:row-span-1">
           google places autocomplete
